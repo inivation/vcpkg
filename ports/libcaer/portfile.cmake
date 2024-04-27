@@ -7,6 +7,7 @@ vcpkg_from_gitlab(
     HEAD_REF master
     PATCHES
         fix-libusb.diff
+        old-glibc-endian.patch
 )
 
 find_program(PKGCONFIG NAMES pkgconf PATHS "${CURRENT_HOST_INSTALLED_DIR}/tools/pkgconf" NO_DEFAULT_PATH REQUIRED)

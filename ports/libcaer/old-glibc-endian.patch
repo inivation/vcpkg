@@ -1,0 +1,13 @@
+diff --git a/cmakemod/inivation-setup.cmake b/cmakemod/inivation-setup.cmake
+index f9a7769..494cc94 100644
+--- a/cmakemod/inivation-setup.cmake
++++ b/cmakemod/inivation-setup.cmake
+@@ -164,6 +164,8 @@ IF(OS_UNIX)
+ 	# POSIX system (Unix, Linux, MacOS X)
+ 	ADD_DEFINITIONS(-D_XOPEN_SOURCE=700)
+ 	ADD_DEFINITIONS(-D_DEFAULT_SOURCE=1)
++	# Required for ancient glibc and endian.h
++	ADD_DEFINITIONS(-D_BSD_SOURCE=1)
+ 
+ 	IF(OS_MACOS)
+ 		# Use POSIX, not DARWIN_C_SOURCE, as that enables too many extensions and causes collisions in function names,
