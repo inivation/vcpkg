@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO thorvg/thorvg
     REF "v${VERSION}"
-    SHA512 2bc5f34ecdf988b755a8efc40dccebdedfa039164d6e23f0560aaa361ed3994620af4d5ab9d66377544b07a1eca4eaebdae8b7761d234da4c4b43075ca9aebb2
+    SHA512 1f92ac37d537399cc0792f36d92c6ddfd0c0c036072f1058d8805690f5eaf2f3d7b02e6b35eacf3e3db607e321ccae30defc0f69d9775cfcd55259d7a22e6820
     HEAD_REF master
 )
 
@@ -29,6 +29,7 @@ vcpkg_configure_meson(
         -Dtests=false
         -Dexamples=false
         -Dstrip=false
+        -Dextra=['']
     OPTIONS_DEBUG
         -Dlog=true
         -Dbindir=${CURRENT_PACKAGES_DIR}/debug/bin
